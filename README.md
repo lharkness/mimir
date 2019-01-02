@@ -1,0 +1,2 @@
+# mimir
+Encrypted Messaging Service
