@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mimir-mvn/mimir.iml" filepath="$PROJECT_DIR$/mimir-mvn/mimir.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mimir-mvn/mimir-mvn.iml" filepath="$PROJECT_DIR$/mimir-mvn/mimir-mvn.iml" />
+    </modules>
+  </component>
+</project>
