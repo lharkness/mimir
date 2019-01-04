@@ -18,7 +18,7 @@ public class ExitAction implements MimirAction {
 
     @Override
     public ActionResult handle(String input, MimirUIElements mimirUIElements) {
-        mimirUIElements.getTextTerminal().println("Good Bye");
+        mimirUIElements.getOutputFacility().output("Good Bye");
         return ActionResult.builder()
                 .terminate(true)
                 .exitCode(0)

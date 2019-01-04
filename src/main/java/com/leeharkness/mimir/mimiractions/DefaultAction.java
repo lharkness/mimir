@@ -15,7 +15,7 @@ public class DefaultAction implements MimirAction {
 
     @Override
     public ActionResult handle(String input, MimirUIElements mimirUIElements) {
-        mimirUIElements.getTextTerminal().println("Unknown Command");
+        mimirUIElements.getOutputFacility().output("Unknown Command");
         return ActionResult.builder().terminate(false).build();
     }
 }

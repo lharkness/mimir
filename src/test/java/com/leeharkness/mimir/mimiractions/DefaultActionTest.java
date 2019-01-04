@@ -2,6 +2,8 @@ package com.leeharkness.mimir.mimiractions;
 
 import com.leeharkness.mimir.ActionResult;
 import com.leeharkness.mimir.MimirUIElements;
+import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
+import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextTerminal;
 import org.junit.Before;
@@ -24,9 +26,9 @@ public class DefaultActionTest {
     public MockitoRule rule = MockitoJUnit.rule();
 
     @Mock
-    private TextIO mockTextIO;
+    private MimirInputFacility mockInputFacility;
     @Mock
-    private TextTerminal<?> mockTextTerminal;
+    private MimirOutputFacility mockOutputFacility;
 
     @Captor
     private ArgumentCaptor<String> stringCaptor;
@@ -39,8 +41,8 @@ public class DefaultActionTest {
     public void setup() {
         this.target = new DefaultAction();
         mimirUIElements = MimirUIElements.builder()
-                .textTerminal(mockTextTerminal)
-                .textIO(mockTextIO)
+                .inputFacility(mockInputFacility)
+                .outputFacility(mockOutputFacility)
                 .build();
     }
 
@@ -49,7 +51,7 @@ public class DefaultActionTest {
         ActionResult result = target.handle("input", mimirUIElements);
 
         assertThat(result.isTerminate(), is(false));
-        verify(mockTextTerminal).println(stringCaptor.capture());
+        verify(mockOutputFacility).output(stringCaptor.capture());
         assertTrue(stringCaptor.getValue().contains("Unknown"));
     }
 

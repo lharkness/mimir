@@ -1,11 +1,14 @@
 package com.leeharkness.mimir.awssupport;
 
-import org.beryx.textio.TextTerminal;
+import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
+
+import java.util.Optional;
+import java.util.UUID;
 
 public class CognitoStub {
-    public boolean login(String userName, String password, TextTerminal<?> terminal) {
+    public Optional<String> login(String userName, String password, MimirOutputFacility terminal) {
         // TODO:  Use Cognito to log this user in
-        terminal.println("Logging user " + userName + " in via Cognito ");
-        return true;
+        terminal.output("Logging user " + userName + " in via Cognito ");
+        return Optional.of(UUID.randomUUID().toString());
     }
 }

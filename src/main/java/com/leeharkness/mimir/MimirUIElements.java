@@ -1,5 +1,7 @@
 package com.leeharkness.mimir;
 
+import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
+import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
 import lombok.Builder;
 import lombok.Data;
 import org.beryx.textio.TextIO;
@@ -9,6 +11,6 @@ import org.beryx.textio.TextTerminal;
 @Builder
 public class MimirUIElements {
     private String prompt;
-    private TextIO textIO;
-    private TextTerminal<?> textTerminal;
+    private MimirInputFacility inputFacility;
+    private MimirOutputFacility outputFacility;
 }

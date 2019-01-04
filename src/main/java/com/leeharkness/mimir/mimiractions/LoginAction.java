@@ -8,8 +8,11 @@ import com.leeharkness.mimir.awssupport.CognitoStub;
 import javax.inject.Inject;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class LoginAction implements MimirAction {
+
+    public static final String NULL_TOKEN = "NULL_TOKEN";
 
     private CognitoStub cognitoStub;
 
@@ -31,21 +34,22 @@ public class LoginAction implements MimirAction {
             userName = parts[1];
         }
         else {
-            userName = mimirUIElements.getTextIO().newStringInputReader().read("User Name>");
+            userName = mimirUIElements.getInputFacility().promptForInputUsing("User Name>");
         }
         String password;
         if (parts.length > 2) {
             password = parts[2];
         }
         else {
-            password = mimirUIElements.getTextIO().newStringInputReader().withInputMasking(true).read("Password>");
+            password = mimirUIElements.getInputFacility().promptForPasswordUsing("Password>");
         }
 
-        boolean loginResult = cognitoStub.login(userName, password, mimirUIElements.getTextTerminal());
+        Optional<String> loginResult = cognitoStub.login(userName, password, mimirUIElements.getOutputFacility());
 
         return ActionResult.builder()
                 .prompt(userName + ">")
-                .loggedIn(loginResult)
+                .loggedIn(loginResult.isPresent())
+                .backEndToken(loginResult.orElse(NULL_TOKEN))
                 .build();
     }
 }

@@ -16,6 +16,7 @@ public class ActionResult {
     private String prompt;
     private int exitCode;
     private boolean terminate;
+    private String backEndToken;
 
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
@@ -26,7 +27,7 @@ public class ActionResult {
      * @param resultKey The key to the
      * @return the value associated with this key, null if not present
      */
-    public String getResult(String resultKey) {
+    public String getResultData(String resultKey) {
         return null;
     }
 }

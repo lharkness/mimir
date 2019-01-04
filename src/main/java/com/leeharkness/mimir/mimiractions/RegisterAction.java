@@ -42,25 +42,17 @@ public class RegisterAction implements MimirAction {
             userName = parts[1];
         }
         else {
-            userName = mimirUIElements.getTextIO().newStringInputReader().read("User Name>");
+            userName = mimirUIElements.getInputFacility().promptForInputUsing("User Name>");
         }
-        String password = mimirUIElements.getTextIO().newStringInputReader()
-                .withInputMasking(true)
-                .read("Password>");
+        String password = mimirUIElements.getInputFacility().promptForPasswordUsing("Password>");
 
         while (!passwordChecker.valid(password)) {
-            password = mimirUIElements.getTextIO().newStringInputReader()
-                    .withInputMasking(true)
-                    .read("Password>");
+            password = mimirUIElements.getInputFacility().promptForPasswordUsing("Password>");
         }
-        String passwordConfirm = mimirUIElements.getTextIO().newStringInputReader()
-                .withInputMasking(true)
-                .read("Password> (Confirm)>");
+        String passwordConfirm =mimirUIElements.getInputFacility().promptForPasswordUsing("Password (Confirm)>");
         while (!password.equals(passwordConfirm)) {
-            mimirUIElements.getTextTerminal().println("Passwords don't match");
-            passwordConfirm = mimirUIElements.getTextIO().newStringInputReader()
-                    .withInputMasking(true)
-                    .read("Password> (Confirm)>");
+            mimirUIElements.getOutputFacility().output("Passwords don't match");
+            passwordConfirm = mimirUIElements.getInputFacility().promptForPasswordUsing("Password (Confirm)>");
         }
         // generate public/private key
         MimirKey key = keyGenerator.createKeyPairFor(userName, password);

@@ -3,6 +3,8 @@ package com.leeharkness.mimir;
 import com.leeharkness.mimir.mimiractions.ExitAction;
 import com.leeharkness.mimir.mimiractions.LoginAction;
 import com.leeharkness.mimir.mimiractions.RegisterAction;
+import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
+import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextIoFactory;
 import org.beryx.textio.TextTerminal;
@@ -25,14 +27,16 @@ public class MimirApp {
         // Setup our home screen
         TextIO textIO = TextIoFactory.getTextIO();
         TextTerminal<?> terminal = textIO.getTextTerminal();
+        MimirInputFacility mimirInputFacility = MimirInputFacility.builder().textIO(textIO).build();
+        MimirOutputFacility mimirOutputFacility = MimirOutputFacility.builder().textTerminal(terminal).build();
         String input;
         String prompt = ">";
         ActionResult result = null;
 
         mimirUIElements = MimirUIElements.builder()
                 .prompt(prompt)
-                .textIO(textIO)
-                .textTerminal(terminal)
+                .inputFacility(mimirInputFacility)
+                .outputFacility(mimirOutputFacility)
                 .build();
 
         // Login, or register and then login user
