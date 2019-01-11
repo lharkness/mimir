@@ -5,6 +5,7 @@ import com.leeharkness.mimir.mimiractions.LoginAction;
 import com.leeharkness.mimir.mimiractions.RegisterAction;
 import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
 import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
+import com.leeharkness.mimir.mimirsupport.MimirSessionContext;
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextIoFactory;
 import org.beryx.textio.TextTerminal;
@@ -15,7 +16,6 @@ public class MimirApp {
 
     private MimirActions actionRegistry;
     private MimirUIElements mimirUIElements;
-    private String userId;
 
     @Inject
     public MimirApp(MimirActions actionRegistry) {
@@ -30,11 +30,11 @@ public class MimirApp {
         MimirInputFacility mimirInputFacility = MimirInputFacility.builder().textIO(textIO).build();
         MimirOutputFacility mimirOutputFacility = MimirOutputFacility.builder().textTerminal(terminal).build();
         String input;
-        String prompt = ">";
         ActionResult result = null;
+        MimirSessionContext mimirSessionContext = MimirSessionContext.builder().build();
 
         mimirUIElements = MimirUIElements.builder()
-                .prompt(prompt)
+                .prompt(">")
                 .inputFacility(mimirInputFacility)
                 .outputFacility(mimirOutputFacility)
                 .build();
@@ -48,19 +48,22 @@ public class MimirApp {
             if (!isInitialAction(action)) {
                 continue;
             }
-            result = action.handle(input, mimirUIElements);
+            result = action.handle(input, mimirUIElements, mimirSessionContext);
             if (result.isTerminate()) {
                 System.exit(result.getExitCode());
             }
             loggedIn = result.isLoggedIn();
         }
 
+        mimirUIElements.setPrompt(mimirUIElements.getPrompt());
+
         // Main loop
         while(!result.isTerminate()) {
             // TODO: show messages here
             input = textIO.newStringInputReader().read(mimirUIElements.getPrompt());
             MimirAction action = actionRegistry.from(input);
-            result = action.handle(input, mimirUIElements);
+            result = action.handle(input, mimirUIElements, mimirSessionContext);
+            mimirUIElements.setPrompt(mimirUIElements.getPrompt());
         }
 
         System.exit(result.getExitCode());

@@ -11,4 +11,8 @@ public class CognitoStub {
         terminal.output("Logging user " + userName + " in via Cognito ");
         return Optional.of(UUID.randomUUID().toString());
     }
+
+    public void logout(String userName) {
+        // TODO: Use Cognito to log this user out
+    }
 }

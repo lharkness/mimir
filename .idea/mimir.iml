@@ -27,6 +27,7 @@
     <orderEntry type="library" name="Maven: org.beryx:text-io:3.3.0" level="project" />
     <orderEntry type="library" name="Maven: jline:jline:2.14.5" level="project" />
     <orderEntry type="library" name="Maven: org.beryx:awt-color-factory:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.8.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:2.0.2-beta" level="project" />
   </component>
 </module>

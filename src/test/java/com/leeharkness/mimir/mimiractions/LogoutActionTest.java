@@ -2,27 +2,22 @@ package com.leeharkness.mimir.mimiractions;
 
 import com.leeharkness.mimir.ActionResult;
 import com.leeharkness.mimir.MimirUIElements;
+import com.leeharkness.mimir.awssupport.CognitoStub;
 import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
 import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
 import com.leeharkness.mimir.mimirsupport.MimirSessionContext;
-import org.beryx.textio.TextIO;
-import org.beryx.textio.TextTerminal;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.verify;
 
-public class DefaultActionTest {
-
+public class LogoutActionTest {
     @Rule
     public MockitoRule rule = MockitoJUnit.rule();
 
@@ -31,18 +26,17 @@ public class DefaultActionTest {
     @Mock
     private MimirOutputFacility mockOutputFacility;
     @Mock
+    private CognitoStub mockCognitoStub;
+    @Mock
     private MimirSessionContext mockMimirSessionContext;
-
-    @Captor
-    private ArgumentCaptor<String> stringCaptor;
 
     private MimirUIElements mimirUIElements;
 
-    private DefaultAction target;
+    @InjectMocks
+    private LogoutAction target;
 
     @Before
     public void setup() {
-        this.target = new DefaultAction();
         mimirUIElements = MimirUIElements.builder()
                 .inputFacility(mockInputFacility)
                 .outputFacility(mockOutputFacility)
@@ -50,17 +44,16 @@ public class DefaultActionTest {
     }
 
     @Test
-    public void testThatDefaultActionPrintsAMessage() {
-        ActionResult result = target.handle("input", mimirUIElements, mockMimirSessionContext);
+    public void testThatWeLogoutUsersCorrectly() {
 
-        assertThat(result.isTerminate(), is(false));
-        verify(mockOutputFacility).output(stringCaptor.capture());
-        assertTrue(stringCaptor.getValue().contains("Unknown"));
+        String userName = "userName";
+        String[] input = new String[] {"logout", userName};
+        ActionResult actionResult = target.actionSpecificHandle(input, mimirUIElements, mockMimirSessionContext);
+
+        assertFalse(actionResult.isTerminate());
+        assertFalse(actionResult.isLoggedIn());
+
+        verify(mockMimirSessionContext).clear();
+
     }
-
-    @Test
-    public void testThatDefaultActionHandlesNothingExplicitly() {
-        assertThat(target.handles().size(), is(0));
-    }
-
 }

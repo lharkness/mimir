@@ -4,6 +4,7 @@ import com.leeharkness.mimir.ActionResult;
 import com.leeharkness.mimir.MimirUIElements;
 import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
 import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
+import com.leeharkness.mimir.mimirsupport.MimirSessionContext;
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextTerminal;
 import org.junit.Before;
@@ -27,6 +28,8 @@ public class ExitActionTest {
     private MimirInputFacility mockInputFacility;
     @Mock
     private MimirOutputFacility mockOutputFacility;
+    @Mock
+    private MimirSessionContext mockMimirSessionContext;
 
     @Captor
     private ArgumentCaptor<String> stringCaptor;
@@ -46,7 +49,7 @@ public class ExitActionTest {
 
     @Test
     public void testThatExitActionExits() {
-        ActionResult result = target.handle(null, mimirUIElements);
+        ActionResult result = target.handle("", mimirUIElements, mockMimirSessionContext);
 
         assertTrue(result.isTerminate());
         assertThat(result.getExitCode(), is(0));

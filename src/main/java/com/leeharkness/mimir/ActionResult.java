@@ -13,21 +13,23 @@ import java.util.Map;
 public class ActionResult {
 
     private boolean loggedIn;
-    private String prompt;
     private int exitCode;
     private boolean terminate;
-    private String backEndToken;
 
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
-    private Map<String, String> resultMap = new HashMap<>();
+    private Map<String, Object> resultMap = new HashMap<>();
 
     /**
      * To handle Generic return values
      * @param resultKey The key to the
      * @return the value associated with this key, null if not present
      */
-    public String getResultData(String resultKey) {
-        return null;
+    public Object getResultData(String resultKey) {
+        return resultMap.get(resultKey);
+    }
+
+    public static ActionResult noOpResult() {
+        return ActionResult.builder().terminate(false).build();
     }
 }
