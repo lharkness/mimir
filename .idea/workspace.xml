@@ -2,46 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2b06523-40c8-4d06-8dd7-869d68ff4b63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/CloudFormationStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/ContactDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/LogoutAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/MimirBaseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/MimirLoggedInRequiredBaseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/MimirLoggedOutRequiredBaseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirCryptoFacility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirSessionContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/LogoutActionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesActionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimirsupport/MimirCryptoFacilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mimir.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mimir.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/FindContactAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/FindContactActionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/ActionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/ActionResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/MimirAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/MimirAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/MimirActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/MimirActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/MimirApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/MimirApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/CognitoStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/CognitoStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/DynamoStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/DynamoStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/DefaultAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/DefaultAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/ExitAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/ExitAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/LoginAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/RegisterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/RegisterAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKeyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/module/MimirModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/module/MimirModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/DefaultActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/DefaultActionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/ExitActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/ExitActionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/LoginActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/LoginActionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RegisterActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RegisterActionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/mimir-mvn/target/" />
@@ -56,10 +24,10 @@
     <SUITE FILE_PATH="coverage/mimir$com_leeharkness_mimir_in_mimir.ic" NAME="com.leeharkness.mimir in mimir Coverage Results" MODIFIED="1547043169345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.leeharkness.mimir.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/mimir$com_leeharkness_mimir_mimiractions_in_mimir.ic" NAME="com.leeharkness.mimir.mimiractions in mimir Coverage Results" MODIFIED="1547042991204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/mimir$All_in_mimir.ic" NAME="All in mimir Coverage Results" MODIFIED="1547042969920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/mimir$com_leeharkness_mimir_mimiractions_in_mimir.ic" NAME="com.leeharkness.mimir.mimiractions in mimir Coverage Results" MODIFIED="1547398906305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.leeharkness.mimir.mimiractions.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/mimir$All_in_mimir.ic" NAME="All in mimir Coverage Results" MODIFIED="1547042969920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/mimir$RegisterActionTest_testThatWeDontAllowRegisterFromLoggedInUser.ic" NAME="RegisterActionTest.testThatWeDontAllowRegisterFromLoggedInUser Coverage Results" MODIFIED="1546986558782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.leeharkness.mimir.mimiractions.*</FILTER>
     </SUITE>
@@ -69,109 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="943">
-              <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirCryptoFacility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimirsupport/MimirCryptoFacilityTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="38" column="87" selection-start-line="38" selection-start-column="87" selection-end-line="38" selection-end-column="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKeyGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/ContactDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#709#710#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirContact.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="-308">
+              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,8 +52,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesActionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
+            <state relative-caret-position="492">
               <caret line="66" column="74" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="28" column="85" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/FindContactActionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/MimirUIElements.java" />
-        <option value="$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/MimirApp.java" />
         <option value="$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/MimirAction.java" />
         <option value="$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/mimiractions/DefaultAction.java" />
         <option value="$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/mimiractions/ExitAction.java" />
@@ -243,20 +171,22 @@
         <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RegisterActionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/ActionResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/module/MimirModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesActionTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirKeyGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimirsupport/MimirCryptoFacility.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimirsupport/MimirCryptoFacilityTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/ContactDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/FindContactAction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/FindContactActionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java" />
       </list>
     </option>
   </component>
@@ -285,9 +215,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="259" />
-    <option name="y" value="54" />
-    <option name="width" value="1591" />
-    <option name="height" value="1000" />
+    <option name="y" value="56" />
+    <option name="width" value="1593" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -422,7 +352,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547140441773" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547398904434" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -454,7 +384,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MimirCryptoFacilityTest.testThatWeCanEncryptAndDecrypt">
+  <component name="RunManager" selected="JUnit.com.leeharkness.mimir.mimiractions in mimir">
+    <configuration name="FindContactActionTest.testThatFindContactsUsesItsCollaboratorsAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mimir" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leeharkness.mimir.mimiractions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leeharkness.mimir.mimiractions" />
+      <option name="MAIN_CLASS_NAME" value="com.leeharkness.mimir.mimiractions.FindContactActionTest" />
+      <option name="METHOD_NAME" value="testThatFindContactsUsesItsCollaboratorsAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MimirCryptoFacilityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mimir" />
       <extension name="coverage">
@@ -502,7 +448,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SendMessageActionTest.testThatWeCanSendAMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.leeharkness.mimir.mimiractions in mimir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mimir" />
       <extension name="coverage">
         <pattern>
@@ -511,41 +457,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.leeharkness.mimir.mimiractions" />
-      <option name="MAIN_CLASS_NAME" value="com.leeharkness.mimir.mimiractions.SendMessageActionTest" />
-      <option name="METHOD_NAME" value="testThatWeCanSendAMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.leeharkness.mimir in mimir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mimir" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.leeharkness.mimir.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.leeharkness.mimir" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.com.leeharkness.mimir in mimir" />
-      <item itemvalue="JUnit.SendMessageActionTest.testThatWeCanSendAMessage" />
       <item itemvalue="JUnit.MimirCryptoFacilityTest.testThatWeCanGetThisFar" />
       <item itemvalue="JUnit.MimirCryptoFacilityTest" />
       <item itemvalue="JUnit.MimirCryptoFacilityTest.testThatWeCanEncryptAndDecrypt" />
+      <item itemvalue="JUnit.FindContactActionTest.testThatFindContactsUsesItsCollaboratorsAsExpected" />
+      <item itemvalue="JUnit.com.leeharkness.mimir.mimiractions in mimir" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.leeharkness.mimir.mimiractions in mimir" />
+        <item itemvalue="JUnit.FindContactActionTest.testThatFindContactsUsesItsCollaboratorsAsExpected" />
         <item itemvalue="JUnit.MimirCryptoFacilityTest.testThatWeCanEncryptAndDecrypt" />
         <item itemvalue="JUnit.MimirCryptoFacilityTest" />
         <item itemvalue="JUnit.MimirCryptoFacilityTest.testThatWeCanGetThisFar" />
-        <item itemvalue="JUnit.SendMessageActionTest.testThatWeCanSendAMessage" />
-        <item itemvalue="JUnit.com.leeharkness.mimir in mimir" />
       </list>
     </recent_temporary>
   </component>
@@ -559,7 +489,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546470232081</updated>
-      <workItem from="1547154926179" duration="2154000" />
+      <workItem from="1547154926179" duration="11111000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal Testing">
       <created>1546561703415</created>
@@ -568,16 +498,17 @@
       <option name="project" value="LOCAL" />
       <updated>1546561703415</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added message actions, crypto stuff and minimal tests">
+      <created>1547164831120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547164831120</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SendMessageActionTest_testThatWeCanSendAMessage - 2019.01.09 at 12h 19m 47s.xml">
-      <configuration name="SendMessageActionTest.testThatWeCanSendAMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MimirCryptoFacilityTest_testThatWeCanGetThisFar - 2019.01.09 at 15h 51m 11s.xml">
-      <configuration name="MimirCryptoFacilityTest.testThatWeCanGetThisFar" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MimirCryptoFacilityTest_testThatWeCanEncryptAndDecrypt - 2019.01.09 at 15h 54m 02s.xml">
       <configuration name="MimirCryptoFacilityTest.testThatWeCanEncryptAndDecrypt" configurationId="JUnit" />
     </history-entry>
@@ -602,15 +533,21 @@
     <history-entry file="MimirCryptoFacilityTest_testThatWeCanEncryptAndDecrypt - 2019.01.09 at 18h 00m 56s.xml">
       <configuration name="MimirCryptoFacilityTest.testThatWeCanEncryptAndDecrypt" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="FindContactActionTest_testThatFindContactsUsesItsCollaboratorsAsExpected - 2019.01.13 at 10h 56m 17s.xml">
+      <configuration name="FindContactActionTest.testThatFindContactsUsesItsCollaboratorsAsExpected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_leeharkness_mimir_mimiractions_in_mimir - 2019.01.13 at 10h 59m 49s.xml">
+      <configuration name="com.leeharkness.mimir.mimiractions in mimir" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2154000" />
+    <option name="totallyTimeSpent" value="11111000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="259" y="54" width="1591" height="1000" extended-state="0" />
+    <frame x="259" y="56" width="1593" height="998" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1684958" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16827853" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -621,21 +558,21 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31892523" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31850117" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32943925" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943925" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32943925" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.33021078" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290398" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="right" id="Maven" order="4" sideWeight="0.50600344" visible="true" weight="0.20593932" />
+      <window_info anchor="right" id="Maven" order="4" sideWeight="0.50600344" visible="true" weight="0.20567375" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -675,7 +612,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minimal Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimal Testing" />
+    <MESSAGE value="Added message actions, crypto stuff and minimal tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added message actions, crypto stuff and minimal tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -726,8 +664,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/MimirAction.java" />
-    <entry file="file://$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/mimiractions/ExitAction.java" />
     <entry file="file://$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/mimiractions/LoginAction.java" />
     <entry file="file://$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/mimiractions/RegisterAction.java" />
     <entry file="file://$PROJECT_DIR$/mimir-mvn/src/main/java/com/leeharkness/mimir/mimiractions/DefaultAction.java" />
@@ -986,36 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1040,16 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26">
           <caret line="486" column="19" selection-start-line="486" selection-start-column="19" selection-end-line="486" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,26 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1113,10 +989,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/ContactDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/FindContactAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirContact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="161">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/model/MimirMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SNSStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/FindContactActionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1125,7 +1057,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/RetrieveMessagesActionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
+        <state relative-caret-position="492">
           <caret line="66" column="74" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1133,14 +1065,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/ContactDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/datalayer/MessageDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="280">
+          <caret line="28" column="85" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/awssupport/SQSStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leeharkness/mimir/mimiractions/SendMessageAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leeharkness/mimir/mimiractions/SendMessageActionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

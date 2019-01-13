@@ -26,7 +26,7 @@ public class MessageDao {
     }
 
     public boolean sendMessage(MimirMessage mimirMessage, MimirSessionContext mimirSessionContext) {
-        snsStub.sendMessage(mimirMessage.getMessage(), mimirMessage.getToUserName(), mimirSessionContext);
+        snsStub.sendMessage(mimirMessage.getMessage(), mimirMessage.getMimirContact(), mimirSessionContext);
         return true;
     }
 }

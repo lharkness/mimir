@@ -3,12 +3,10 @@ package com.leeharkness.mimir.mimiractions;
 import com.leeharkness.mimir.ActionResult;
 import com.leeharkness.mimir.MimirUIElements;
 import com.leeharkness.mimir.datalayer.ContactDao;
-import com.leeharkness.mimir.datalayer.MessageDao;
 import com.leeharkness.mimir.mimirsupport.MimirInputFacility;
 import com.leeharkness.mimir.mimirsupport.MimirOutputFacility;
 import com.leeharkness.mimir.mimirsupport.MimirSessionContext;
 import com.leeharkness.mimir.model.MimirContact;
-import com.leeharkness.mimir.model.MimirMessage;
 import com.leeharkness.mimir.model.MimirUser;
 import org.junit.Before;
 import org.junit.Rule;
@@ -21,19 +19,15 @@ import org.mockito.junit.MockitoRule;
 import java.util.Collections;
 import java.util.List;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.verify;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
-public class SendMessageActionTest {
+public class FindContactActionTest {
+
     @Rule
     public MockitoRule rule = MockitoJUnit.rule();
 
-    @Mock
-    private MimirSessionContext mockMimirSessionContext;
-    @Mock
-    private MessageDao mockMessageDao;
     @Mock
     private ContactDao mockContactDao;
     @Mock
@@ -41,17 +35,14 @@ public class SendMessageActionTest {
     @Mock
     private MimirOutputFacility mockOutputFacility;
     @Mock
-    private MimirMessage mockMimirMessage;
+    private MimirSessionContext mockMimirSessionContext;
     @Mock
     private MimirUser mockMimirUser;
-    @Mock
-    private MimirContact mockMimirContact;
-
-    private MimirUIElements mimirUIElements;
-    private List<MimirMessage> messages;
 
     @InjectMocks
-    private SendMessageAction target;
+    private FindContactAction target;
+
+    private MimirUIElements mimirUIElements;
 
     @Before
     public void setup() {
@@ -59,19 +50,25 @@ public class SendMessageActionTest {
                 .outputFacility(mockOutputFacility)
                 .inputFacility(mockInputFacility)
                 .build();
-        messages = Collections.singletonList(mockMimirMessage);
     }
 
     @Test
-    public void testThatWeCanSendAMessage() {
+    public void testThatFindContactsUsesItsCollaboratorsAsExpected() {
+        MimirContact mimirContact = MimirContact.builder()
+                .userName("lee")
+                .build();
+        List<MimirContact> expectedContactList = Collections.singletonList(mimirContact);
 
-        String input = "s \"this is a test message\" lee2";
-
+        when(mockMimirUser.getUserName()).thenReturn("lee");
         when(mockMimirSessionContext.getUser()).thenReturn(mockMimirUser);
-        when(mockContactDao.retrieveContact("lee2")).thenReturn(mockMimirContact);
+        when(mockContactDao.searchContacts("lee")).thenReturn(expectedContactList);
+
+        String input = "f lee";
 
         ActionResult result = target.handle(input, mimirUIElements, mockMimirSessionContext);
 
-        verify(mockMessageDao).sendMessage(any(), any());
+        assertThat(result.getResultData("contacts"), is(expectedContactList));
     }
+
+
 }

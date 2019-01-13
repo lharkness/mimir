@@ -3,6 +3,7 @@ package com.leeharkness.mimir.mimiractions;
 import com.google.common.collect.ImmutableList;
 import com.leeharkness.mimir.ActionResult;
 import com.leeharkness.mimir.MimirUIElements;
+import com.leeharkness.mimir.datalayer.ContactDao;
 import com.leeharkness.mimir.datalayer.MessageDao;
 import com.leeharkness.mimir.mimirsupport.MimirCryptoFacility;
 import com.leeharkness.mimir.mimirsupport.MimirSessionContext;
@@ -13,11 +14,13 @@ import java.util.List;
 
 public class SendMessageAction extends MimirLoggedInRequiredBaseAction {
 
+    private ContactDao contactDao;
     private MessageDao messageDao;
     private MimirCryptoFacility mimirCryptoFacility;
 
     @Inject
-    public SendMessageAction(MessageDao messageDao, MimirCryptoFacility mimirCryptoFacility) {
+    public SendMessageAction(MessageDao messageDao, ContactDao contactDao, MimirCryptoFacility mimirCryptoFacility) {
+        this.contactDao = contactDao;
         this.messageDao = messageDao;
         this.mimirCryptoFacility = mimirCryptoFacility;
     }
@@ -28,7 +31,7 @@ public class SendMessageAction extends MimirLoggedInRequiredBaseAction {
         MimirMessage mimirMessage = MimirMessage.builder()
                 .message(input[1])
                 .fromUserName(mimirSessionContext.getUser().getUserName())
-                .toUserName(input[2])
+                .mimirContact(contactDao.retrieveContact(input[2]))
                 .build();
         messageDao.sendMessage(mimirMessage, mimirSessionContext);
 
